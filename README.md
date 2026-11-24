@@ -15,9 +15,7 @@ The project models the core behaviour of a web browser (navigation history, tabs
 5. [Repository Structure](#repository-structure)
 6. [Build and Run](#build-and-run)
 7. [Design Overview](#design-overview)
-8. [Team Workflow](#team-workflow)
-9. [Coding Standards](#coding-standards)
-10. [Task Distribution](#task-distribution)
+
 
 ---
 
