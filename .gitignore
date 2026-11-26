@@ -1,0 +1,11 @@
+# Personal test file
+test.c
+
+# Compiled files
+*.o
+*.out
+*.exe
+
+# Build directories
+build/
+bin/
