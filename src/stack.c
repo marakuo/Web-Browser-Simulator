@@ -23,27 +23,33 @@ int stack_push(Stack *stack, char *url) {
         printf("stack is full\n");
         return 0;
     }
+    if (strlen(url) >= max_url_len) {
+        printf("URL is too long\n");
+        return 0;
+    }
     stack->top++;
     strcpy(stack->data[stack->top],url);
     return 1;
 }
 
-char *stack_pop(Stack *stack) {
-    if (stack_empty(stack)) {
+int stack_pop(Stack *stack,char *url) {
+    if (stack_empty(stack)||!url) {
         printf("stack is empty\n");
-        return NULL;
+        return 0;
     }
-    char *top_str = stack->data[stack->top];
+    strcpy(url, stack->data[stack->top]);
     stack->top--;
-    return top_str;
-
+    return 1;
 }
-char *stack_peek(Stack *stack) {
-    if (stack_empty(stack)) {
+
+int stack_peek(Stack *stack,char *url) {
+    if (stack_empty(stack)||!url) {
         printf("stack is empty\n");
-        return NULL;
+        return 0;
     }
-    return stack->data[stack->top];
+    strcpy(url, stack->data[stack->top]);
+    return 1;
+
 }
 
 void stack_clear(Stack *stack) {

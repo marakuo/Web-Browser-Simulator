@@ -14,8 +14,8 @@ int stack_empty(Stack *stack);
 int stack_full(Stack *stack);
 int stack_size(Stack *stack);
 int stack_push(Stack *stack,char *url);
-char *stack_pop(Stack *stack);
-char *stack_peek(Stack *stack);
+int stack_pop(Stack *stack,char *url);
+int stack_peek(Stack *stack,char *url);
 void stack_clear(Stack *stack);
 
 
