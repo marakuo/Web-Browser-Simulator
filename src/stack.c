@@ -33,7 +33,8 @@ int stack_push(Stack *stack, char *url) {
 }
 
 int stack_pop(Stack *stack,char *url) {
-    if (stack_empty(stack)||!url) {
+    if (!url)return 0;
+    if (stack_empty(stack)) {
         printf("stack is empty\n");
         return 0;
     }
@@ -43,7 +44,8 @@ int stack_pop(Stack *stack,char *url) {
 }
 
 int stack_peek(Stack *stack,char *url) {
-    if (stack_empty(stack)||!url) {
+    if (!url)return 0;
+    if (stack_empty(stack)) {
         printf("stack is empty\n");
         return 0;
     }
