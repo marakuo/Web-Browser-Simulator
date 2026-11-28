@@ -11,6 +11,8 @@ add_executable(Web_Browser_Simulator
         src/stack.c
         src/queue.c
         src/bookmarks.c
+        src/loader.c
+        src/ui.c
 )
 
 target_include_directories(Web_Browser_Simulator PRIVATE include)

@@ -110,15 +110,19 @@ web-browser-simulator/
 |   |-- stack.h
 |   |-- tabs.h
 |   |-- queue.h
+|   |-- loader.h            Page loading and download processing
 |   |-- bookmarks.h
-|   `-- browser.h
+|   |-- browser.h
+|   `-- ui.h                Address bar and help menu
 |-- src/
 |   |-- stack.c
 |   |-- tabs.c
 |   |-- queue.c
+|   |-- loader.c
 |   |-- bookmarks.c
 |   |-- browser.c           Navigation logic (visit, back, forward)
-|   `-- main.c              Command loop and user interface
+|   |-- ui.c                drawBar and help
+|   `-- main.c              Command loop
 |-- tests/
 |   `-- test_*.c            Unit tests for each module
 |-- docs/
